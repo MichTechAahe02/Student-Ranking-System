@@ -25,7 +25,7 @@ int main() {
         cin>>mark;
         stdm[i]=mark;
     }
-
+ cout <<" Will  be logging with student data"<<endl;
 cout<<"Printing initial List\n";
 
     for(int i = 0 ; i < Sc;i++ )
@@ -41,7 +41,7 @@ cout<<"Printing initial List\n";
             }
         }
         
-        cout<<stdm[i] <<" Will be swapped with "<<  stdm[maxIndex] <<endl;
+        cout<<stdm[i] <<" Will  be swapped with "<<  stdm[maxIndex] <<endl;
         swap(stdm[i], stdm[maxIndex]);
         
         cout<<"Correspinding names -> "<<std[i] <<" Will be swapped with "<<  std[maxIndex] <<endl;
