@@ -15,17 +15,16 @@ int main() {
     int Sc;
     cout<<"Enter student count :";
     cin>>Sc;  
+     cin.ignore();
+
     vector<pair<string,int>> std;
 
     //Taking input as a pair of Student name and marks
     for(int i = 0 ; i < Sc; i++)
     {
-        cout<<"Enter  Firstname of student\n:";
+        cout<<"Enter  Full Name of student\n:";
         string name;
-        cin>>name;
-        cout<<"Enter  Lastname of student\n:";
-        string lname;
-        cin>>lname;
+        getline(cin,name);
         
 
 //Concatenation of name and lastname 
@@ -34,6 +33,8 @@ int main() {
         cout<<"Enter  Marks of student\n:";
         int mark;
         cin>>mark;
+        cin.ignore();
+
         std.push_back(make_pair(full_name,mark));
     }
 
