@@ -8,3 +8,7 @@ The comparator compares the second element of each pair (the marks), arranging p
 Finally, it prints the sorted list, showing each student's name alongside their marks. This approach leverages std::sort for an efficient 𝑂(𝑛log𝑛).
 O(nlogn) sorting based on marks.
 
+This code defines a Student structure with fullname and marks as members. It reads the count of students and then, for each student, collects their full name and marks. 
+All students are stored in a vector, and the sortStudents function sorts this vector in descending order of marks using a custom comparator. 
+After sorting, the code prints the initial and sorted lists, showing each student's name and marks. 
+The use of cin.ignore() ensures that input is correctly handled for multi-word names.
