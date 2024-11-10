@@ -32,6 +32,24 @@ cout<<"Printing initial List\n";
     {
         cout<<"Student Name :" <<std[i]<<" Marks: "<<stdm[i]<<endl;
     }
-return 0;
-}
 
+    for (int i = 0; i < Sc - 1; i++) {
+        int maxIndex = i;
+        for (int j = i + 1; j < Sc; j++) {
+            if (stdm[j] > stdm[maxIndex]) {
+                maxIndex = j;
+            }
+        }
+        
+        swap(stdm[i], stdm[maxIndex]);
+        
+        swap(std[i], std[maxIndex]);
+    }
+
+    cout << "Printing sorted list in descending order of marks:\n";
+    for (int i = 0; i < Sc; i++) {
+        cout << "Student Name: " << std[i] << " Marks: " << stdm[i] << endl;
+    }
+
+    return 0;
+}
