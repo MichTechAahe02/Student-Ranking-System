@@ -20,13 +20,21 @@ int main() {
     //Taking input as a pair of Student name and marks
     for(int i = 0 ; i < Sc; i++)
     {
-        cout<<"Enter  name of student\n:";
+        cout<<"Enter  Firstname of student\n:";
         string name;
         cin>>name;
+        cout<<"Enter  Lastname of student\n:";
+        string lname;
+        cin>>lname;
+        
+
+//Concatenation of name and lastname 
+        string full_name = name+" " + lname;
+
         cout<<"Enter  Marks of student\n:";
         int mark;
         cin>>mark;
-        std.push_back(make_pair(name,mark));
+        std.push_back(make_pair(full_name,mark));
     }
 
 cout<<"Printing initial List\n";
