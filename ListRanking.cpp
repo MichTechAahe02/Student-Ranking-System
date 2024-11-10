@@ -1,54 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void sortPair(vector<pair<string,int>>&t)
+{
+
+    sort(t.begin(), t.end(), [](const pair<string, int> &a, const pair<string, int> &b) {
+        return a.second > b.second; // Compare by marks in descending order
+    });
+
+}
+
 int main() {
 
     int Sc;
     cout<<"Enter student count :";
-    cin>>Sc;
-   
-    string std[Sc];
+    cin>>Sc;  
+    vector<pair<string,int>> std;
+
+    //Taking input as a pair of Student name and marks
     for(int i = 0 ; i < Sc; i++)
     {
         cout<<"Enter  name of student\n:";
         string name;
         cin>>name;
-        std[i]=name;
-    }
-
-   
-    int stdm[Sc];
-     for(int i = 0 ; i < Sc; i++)
-    {
-          cout<<"Enter  Marks of student\n:";
+        cout<<"Enter  Marks of student\n:";
         int mark;
         cin>>mark;
-        stdm[i]=mark;
+        std.push_back(make_pair(name,mark));
     }
 
 cout<<"Printing initial List\n";
 
-    for(int i = 0 ; i < Sc;i++ )
+    for(auto i: std )
     {
-        cout<<"Student Name :" <<std[i]<<" Marks: "<<stdm[i]<<endl;
+        cout<<"Student Name :" << i.first <<" Marks: "<<i.second <<endl;
     }
 
-    for (int i = 0; i < Sc - 1; i++) {
-        int maxIndex = i;
-        for (int j = i + 1; j < Sc; j++) {
-            if (stdm[j] > stdm[maxIndex]) {
-                maxIndex = j;
-            }
-        }
-        
-        swap(stdm[i], stdm[maxIndex]);
-        
-        swap(std[i], std[maxIndex]);
-    }
+    sortPair(std);
 
     cout << "Printing sorted list in descending order of marks:\n";
-    for (int i = 0; i < Sc; i++) {
-        cout << "Student Name: " << std[i] << " Marks: " << stdm[i] << endl;
+    for (auto i: std ){
+        cout << "Student Name: " << i.first <<" Marks: "<<i.second <<endl;
     }
 
     return 0;
