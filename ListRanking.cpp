@@ -30,7 +30,7 @@ cout<<"Printing initial List\n";
 
     for(int i = 0 ; i < Sc;i++ )
     {
-        cout<<"Student Name :" <<std[i]<<" Marks: "<<stdm[i]<<endl;
+        cout<<"Student Name :" <<std[i]<<" Marks : "<<stdm[i]<<endl;
     }
 
     for (int i = 0; i < Sc - 1; i++) {
@@ -41,8 +41,10 @@ cout<<"Printing initial List\n";
             }
         }
         
+        cout<<stdm[i] <<" Will be swapped with "<<  stdm[maxIndex] <<endl;
         swap(stdm[i], stdm[maxIndex]);
         
+        cout<<"Correspinding names -> "<<std[i] <<" Will be swapped with "<<  std[maxIndex] <<endl;
         swap(std[i], std[maxIndex]);
     }
 
